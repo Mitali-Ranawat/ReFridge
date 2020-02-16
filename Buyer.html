@@ -1,0 +1,1244 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ReFridge Buyer</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static '/Lap/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/Lap/css/agency.css' %}" >
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static '/Lap/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="{% static '/cssbuy/styles.css' %}"> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/Lap/css/agency.min.css' %}" rel="stylesheet">
+
+
+
+  <link href="{% static '/Lap/dashboard/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static '/Lap/dashboard/css/simple-sidebar.css' %}" rel="stylesheet">
+
+  <style>
+  
+.blok{margin:30px;}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #050505;
+  color: white;
+}
+  
+   
+  </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Re Fridge</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Offers</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Fridge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Place Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/logout" class="btn btn-light action-button">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Header -->
+  <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/wXuzS9xR49M/1920x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4"><strong>Fruits</strong></h2>
+              <p class="lead"><strong>Top Selling Fruits on our site.</strong></p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/J91jD9u6Nk4/1920x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4"><strong>Vegetables</strong></h2>
+              <p class="lead"><strong>Top Selling Vegetables on our site.</strong></p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/qSkWlOBHia0/1920x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4"><strong>Packed beverages</strong></h2>
+              <p class="lead"><strong>Top Selling Packed beverages on our site.</strong></p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+    </header>
+
+   
+
+  <!-- Services -->
+  <!-- <section class="page-section" id="services">
+    
+  </section> -->
+
+
+   <!-- Portfolio Grid -->
+  <section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"><strong>Top Offers</strong></h2>
+          <h3 class="section-subheading text-muted"><strong>Have a look at our mind boggling offers!</strong></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static '/Lap/img/portfolio/07-thumbnail.jpg' %}" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4><strong>Apples</strong></h4>
+            <p class="text-muted"><strong>20% off</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static '/Lap/img/portfolio/08-thumbnail.jpg' %}" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4><strong>Oranges</strong></h4>
+            <p class="text-muted"><strong>30% off</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static '/Lap/img/portfolio/09-thumbnail.jpg' %}" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4><strong>Bananas</strong></h4>
+            <p class="text-muted"><strong>20% off</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static '/Lap/img/portfolio/10-thumbnail.png' %}" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4><strong>Pears</strong></h4>
+            <p class="text-muted"><strong>30% off</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static '/Lap/img/portfolio/11-thumbnail.jpg' %}" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4><strong>PineApples</strong></h4>
+            <p class="text-muted"><strong>20% off</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static '/Lap/img/portfolio/12-thumbnail.jpg' %}" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4><strong>Cherries</strong></h4>
+            <p class="text-muted"><strong>30% off</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- About -->
+  <section class="blok" id="about">
+    <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"><strong>Dashboard</strong></h2>
+          <h3 class="section-subheading text-muted"><strong>Manage your buyer profile!</strong></h3>
+        </div>
+
+    
+
+    <div class="blok-body">
+<div class="row">
+  <!-- Nav tabs -->
+  <ul class="nav tab-menu nav-pills col-sm-12 nav-stacked pr15 bg-light">
+    <li class="active"  data-toggle="tab"><a class="btn btn-dark btn-block" href="#home">Profile</a></li><br>
+    <li><a class="btn btn-dark btn-block" href="#profile"  data-toggle="tab">Add details</a></li><br>
+<!--     <li><a class="btn btn-dark btn-block" href="#messages"  data-toggle="tab">Fridge Status</a></li><br>
+ -->    <li><a class="btn btn-dark btn-block" href="#settings"  data-toggle="tab">Report</a></li><br>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content col-sm-12">
+    <div class="tab-pane well active in active" id="home"> 
+      <br><br><h1><strong>Profile</strong></h1>
+        <br><br>
+         <table id="customers">
+                    
+                    
+          <tr>
+            <th>Profile Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Flat</th>
+            <th>City</th>
+            <th>Pincode</th>        
+          </tr>
+            
+            {% for v in data2.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>  
+    </div>
+    <div class="tab-pane well fade" id="profile"> 
+         <div id="evaluate">
+                    
+                        <form action = "/addcashB/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>Add Cash and Address</strong></h1>
+                                    <br><br>
+                                    
+                                </td>
+                                
+                                
+                                <td>
+                                    <label>
+                                    <strong>1.</strong>Enter the cash amount:<br>
+                                    </label> 
+                                    <input type="number" placeholder="cash" name="cash"><br><br>
+                                    
+                                </td>
+                                
+                                <td>
+                                    <label>
+                                    <strong>2.</strong>Enter the Latitude:<br>
+                                    </label> 
+                                    <input type="number" placeholder="latitude" name="latitude"><br><br>
+                                    
+                                </td>
+
+                                <td>
+                                    <label>
+                                    <strong>1.</strong>Enter the Longitude:<br>
+                                    </label> 
+                                    <input type="number" placeholder="longitude" name="longitude"><br><br>
+                                    
+                                </td>
+                                
+                                <button type="submit" name="button" class="button" >Submit</button>
+                                <button type="reset" name="button" class="button" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>
+
+
+
+
+
+     
+    </div>  
+    <!-- <div class="tab-pane well fade" id="messages">
+      <h1><strong>Fridge Status</strong></h1>
+    <br><br> 
+    </div>  -->  
+    <div class="tab-pane well fade" id="settings">
+      <br><br><h1><strong>Report</strong></h1>
+      <br><br> 
+      <table id="customers">
+      <!-- <br><h4><strong>Your Lowest cost Order</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Quantity</th>
+            <th>Order Price</th>
+            <th>Product Name</th>
+               
+          </tr>
+            
+            {% for v in data8.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>
+
+      <table id="customers">
+      <br><h4><strong>Your Highest cost Order</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Quantity</th>
+            <th>Order Price</th>
+            <th>Product Name</th>
+               
+          </tr>
+            
+            {% for v in data9.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>   --> 
+
+
+      <table id="customers">
+      <br><h4><strong>Overall lowest cost Order</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Quantity</th>
+            <th>Order Price</th>
+            <th>Product Name</th>
+               
+          </tr>
+            
+            {% for v in data10.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>     
+     <table id="customers">
+      <br><h4><strong>Overall Highest cost Order</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Quantity</th>
+            <th>Order Price</th>
+            <th>Product Name</th>
+               
+          </tr>
+            
+            {% for v in data11.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>
+
+      
+
+        <table id="customers">
+      <br><h4><strong>Total of each Product sold</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Quantity</th>
+            
+            <th>Product Name</th>
+               
+          </tr>
+            
+            {% for v in data13.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>           
+
+
+    </div>
+</div><!-- //row -->
+</div><!-- blok-body // -->     
+   
+  </section>
+
+  <!-- Team -->
+  <section class="blok" id="team">
+    <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"><strong>Fridge</strong></h2>
+          <h3 class="section-subheading text-muted"><strong>Manage your Fridge details!</strong></h3>
+        </div>
+
+
+    
+
+    <div class="blok-body">
+<div class="row">
+  <!-- Nav tabs -->
+  <ul class="nav tab-menu nav-pills col-sm-12 nav-stacked pr15 bg-light">
+    <li class="active"  data-toggle="tab"><a class="btn btn-dark btn-block" href="#home1">Stocks</a></li><br>
+    <li><a class="btn btn-dark btn-block" href="#profile1"  data-toggle="tab">Add Product</a></li><br>
+<!--     <li><a class="btn btn-dark btn-block" href="#messages1"  data-toggle="tab">Edit Product</a></li><br>
+ -->    <li><a class="btn btn-dark btn-block" href="#settings1"  data-toggle="tab">Fridge Conditions</a></li><br>
+    
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content col-sm-12">
+    <div class="tab-pane well active in active" id="home1"> 
+      <br><br><h1><strong>Stocks</strong></h1>
+        <br><br>
+         <table id="customers">
+                    
+                    
+          <tr>
+            <th>Stock Id</th>
+            <th>Fridge Quantity</th>
+            <th>Required Limit</th>
+            <th>Product Name</th>
+            <!-- <th>Buyer Id</th> -->
+                   
+          </tr>
+            
+            {% for v in data3.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>  
+
+
+
+
+  </div>
+    <div class="tab-pane well fade" id="profile1"> 
+      
+      <br><br><h1><strong>Products on sale</strong></h1>
+        <br><br>
+         <table id="customers">
+                    
+                    
+          <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            
+                   
+          </tr>
+            
+            {% for v in data6.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>  
+      <div id="evaluate">
+                    
+                        <form action = "/addfpro/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>Add Product</strong></h1>
+                                    <br><br>
+                                    
+                                </td>
+                                
+                                
+                                <!-- <td>
+                                    <label>
+                                    <strong>1.</strong>Enter Fridge Number:<br>
+                                    </label> 
+                                    <input type="number" placeholder="fridge" name="fno"><br><br>
+                                    
+                                </td> -->
+                                
+                                <td>
+                                    <label>
+                                    <strong>1.</strong>Enter Required Limit:<br>
+                                    </label> 
+                                    <input type="number" placeholder="limit" name="limit"><br><br>
+                                    
+                                </td>
+
+                                <td>
+                                    <label>
+                                    <strong>2.</strong>Enter Product Id:<br>
+                                    </label> 
+                                    <input type="number" placeholder="productid" name="productid"><br><br>
+                                    
+                                </td>
+
+                                
+                                
+                                <button type="submit" name="button" class="button" >Submit</button>
+                                <button type="reset" name="button" class="button" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>
+</div>
+    <!-- <div class="tab-pane well fade" id="messages1">
+      <h1><strong>Edit Product</strong></div></h1>
+                                    <br><br> -->
+    <div class="tab-pane well fade" id="settings1">
+      <br><br><h1><strong>Fridge Conditions</strong></h1>
+        <br><br> 
+         <table id="customers">
+                    
+                    
+          <tr>
+            <!-- <th>Id</th> -->
+            <th>Fridge Humidity</th>
+            <th>Fridge Temperature</th>
+                    
+          </tr>
+            
+            {% for v in data.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table> 
+
+
+
+    </div>  
+    
+  </div>
+</div><!-- //row -->
+</div><!-- blok-body // -->     
+   
+      
+    
+  </section>
+
+
+  
+
+  
+
+  <!-- Contact -->
+  <section class="blok" id="services">
+    <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"><strong>Place Order</strong></h2>
+          <h3 class="section-subheading text-muted"><strong>Manage your ordering!</strong></h3>
+        </div>
+
+    <div class="blok-body">
+<div class="row">
+  <!-- Nav tabs -->
+  <ul class="nav tab-menu nav-pills col-sm-12 nav-stacked pr15 bg-light">
+    <li class="active"  data-toggle="tab"><a class="btn btn-dark btn-block" href="#home2">Order History</a></li><br>
+    <li><a class="btn btn-dark btn-block" href="#profile2"  data-toggle="tab">Cash Details</a></li><br>
+    <li><a class="btn btn-dark btn-block" href="#messages2"  data-toggle="tab">Suggestions</a></li><br>
+    <!-- <li><a class="btn btn-dark btn-block" href="#settings2"  data-toggle="tab">Suggestions</a></li><br> -->
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content col-sm-12">
+    <div class="tab-pane well active in active" id="home2"> 
+        <br><br><h1><strong>Order History</strong></h1>
+        <br><br>
+        <table id="customers">
+                    
+                    
+          <tr>
+            <th>Id</th>
+            <th>Order Quantity</th>
+            <th>Order Price</th>
+            <th>Buyer ID</th>
+            <th>Product Name</th>
+            <th>Seller ID</th>
+            <th>SellerStock ID</th>
+            <!-- <th>SellerStock ID</th>         -->
+          </tr>
+            
+            {% for v in data5.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table> 
+
+
+
+
+
+
+
+  </div>
+    <div class="tab-pane well fade" id="profile2"> 
+           <br><br><h1><strong>Cash Details</strong></h1>
+        <br><br>
+        <table id="customers">
+                    
+                    
+          <tr>
+            <th>Seller Id</th>
+            <th>Total Cash</th>
+               
+          </tr>
+            
+            {% for v in data1.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>
+
+
+
+
+    </div>
+    <div class="tab-pane well fade" id="messages2">
+          <br><br><h1><strong>Suggestions</strong></h1>
+        <br><br>
+
+          <table id="customers">
+                    
+          <br><h4><strong>Lowest cost Product</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+               
+          </tr>
+            
+            {% for v in data4.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>
+
+          <table id="customers">
+                    
+          <br><h4><strong>Highest cost Product</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+               
+          </tr>
+            
+            {% for v in data7.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table>
+
+           <table id="customers">
+      <br><h4><strong>Highest selling Product</strong></h4>
+        <br>          
+          <tr>
+            <th>Product Quantity</th>
+            
+            <th>Product Name</th>
+               
+          </tr>
+            
+            {% for v in data12.values %}
+            <tr>
+
+              
+              {% for value in v.values %}
+              <td> {{ value }} </td>                    
+
+
+            {% endfor %}  
+            </tr>
+            
+            {% endfor %} 
+                  
+          </table> 
+
+           </div>
+    <!-- <div class="tab-pane well fade" id="settings2">
+          <strong>Suggestions</strong> </div> -->
+  </div>
+</div><!-- //row -->
+</div><!-- blok-body // -->    
+  
+      
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Your Website 2019</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Apple</h2>
+                
+                <img class="img-fluid d-block mx-auto" src="{% static '/Lap/img/portfolio/07-full.jpg' %}" alt="">
+                <p>20% off</p>
+                
+                
+                <div id="evaluate">
+                    
+                        <form action = "/ordAPP/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>ORDER</strong></h1>
+                                    
+                                </td>
+                                <td>
+                                    <label>
+                                    <strong>Quantity:</strong><br>
+                                    </label>  
+                                    <input type="number" placeholder="Quantity" name="quantity"><br><br>
+                                </td>
+                                
+                                <button type="submit" name="button" class="btn btn-primary" >Order</button>
+                                <button type="reset" name="button" class="btn btn-primary" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>    
+
+              <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>Close
+                  </button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Oranges</h2>
+                
+                <img class="img-fluid d-block mx-auto" src="{% static '/Lap/img/portfolio/08-full.jpg' %}" alt="">
+                <p>30% off</p>
+                
+                 <div id="evaluate">
+                    
+                        <form action = "/ordORG/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>ORDER</strong></h1>
+                                    
+                                </td>
+                                <td>
+                                    <label>
+                                    <strong>Quantity:</strong><br>
+                                    </label>  
+                                    <input type="number" placeholder="Quantity" name="quantity"><br><br>
+                                </td>
+                                
+                                <button type="submit" name="button" class="btn btn-primary" >Order</button>
+                                <button type="reset" name="button" class="btn btn-primary" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>    
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Bananas</h2>
+                
+                <img class="img-fluid d-block mx-auto" src="{% static '/Lap/img/portfolio/09-full.jpg' %}" alt="">
+                <p>20% off</p>
+                
+                <div id="evaluate">
+                    
+                        <form action = "/ordBAN/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>ORDER</strong></h1>
+                                    
+                                </td>
+                                <td>
+                                    <label>
+                                    <strong>Quantity:</strong><br>
+                                    </label>  
+                                    <input type="number" placeholder="Quantity" name="quantity"><br><br>
+                                </td>
+                                
+                                <button type="submit" name="button" class="btn btn-primary" >Order</button>
+                                <button type="reset" name="button" class="btn btn-primary" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>    
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Pears</h2>
+                
+                <img class="img-fluid d-block mx-auto" src="{% static '/Lap/img/portfolio/10-full.png' %}" alt="">
+                <p>30% off</p>
+                
+                <div id="evaluate">
+                    
+                        <form action = "/ordPEA/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>ORDER</strong></h1>
+                                    
+                                </td>
+                                <td>
+                                    <label>
+                                    <strong>Quantity:</strong><br>
+                                    </label>  
+                                    <input type="number" placeholder="Quantity" name="quantity"><br><br>
+                                </td>
+                                
+                                <button type="submit" name="button" class="btn btn-primary" >Order</button>
+                                <button type="reset" name="button" class="btn btn-primary" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>    
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Pineapple</h2>
+                
+                <img class="img-fluid d-block mx-auto" src="{% static '/Lap/img/portfolio/11-full.jpg' %}" alt="">
+                <p>20% off</p>
+                
+                <div id="evaluate">
+                    
+                        <form action = "/ordPIN/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>ORDER</strong></h1>
+                                    
+                                </td>
+                                <td>
+                                    <label>
+                                    <strong>Quantity:</strong><br>
+                                    </label>  
+                                    <input type="number" placeholder="Quantity" name="quantity"><br><br>
+                                </td>
+                                
+                                <button type="submit" name="button" class="btn btn-primary" >Order</button>
+                                <button type="reset" name="button" class="btn btn-primary" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>    
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Cherries</h2>
+                
+                <img class="img-fluid d-block mx-auto" src="{% static '/Lap/img/portfolio/12-full.jpg' %}" alt="">
+                <p>30% off</p>
+                
+                <div id="evaluate">
+                    
+                        <form action = "/ordCHE/" method = 'POST' enctype = "multipart/form-data">
+                        {% csrf_token %}
+                            <tr>
+                                <td>
+                                    <br><br><h1><strong>ORDER</strong></h1>
+                                    
+                                </td>
+                                <td>
+                                    <label>
+                                    <strong>Quantity:</strong><br>
+                                    </label>  
+                                    <input type="number" placeholder="Quantity" name="quantity"><br><br>
+                                </td>
+                                
+                                <button type="submit" name="button" class="btn btn-primary" >Order</button>
+                                <button type="reset" name="button" class="btn btn-primary" >Reset</button><br><br>
+                                
+                            </tr>
+                        </form>
+                    </div>    
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static '/Lap/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static '/Lap/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static '/Lap/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="{% static '/Lap/js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static '/Lap/js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static '/Lap/js/agency.min.js' %}"></script>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static '/Lap/dashboard/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static '/Lap/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  
+
+  <script>
+    $('.tab-menu a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+  </script>
+
+  
+   
+
+</body>
+
+</html>
